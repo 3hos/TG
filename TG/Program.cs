@@ -88,7 +88,7 @@ namespace TG
                         {
                             var numb = Convert.ToInt32(song);
                             await _client.AddToFav(message.Chat.Id.ToString(), Convert.ToInt32(song));
-                            await botClient.SendTextMessageAsync(message.Chat, "Song has been added to your /favorites");
+                            await botClient.SendTextMessageAsync(message.Chat, "Check your /favorites");
                         }
                         catch
                         {
@@ -101,7 +101,7 @@ namespace TG
                         try
                         {
                             await _client.DelfromFav(message.Chat.Id.ToString(), Convert.ToInt32(song));
-                            await botClient.SendTextMessageAsync(message.Chat, "Song has been removed from your /favorites");
+                            await botClient.SendTextMessageAsync(message.Chat, "Check your /favorites");
                         }
                         catch
                         {
